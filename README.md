@@ -2,7 +2,7 @@
 ====
 
 ## Description
-You can learn how the contour map and 3D object are correspond by your **ORIGINAL** handwriting picture.
+You can learn how the contour map and 3D object are correspond by your **ORIGINAL** handwriting picture.  
 This program recognizes the contours, creates a 3D object from it and add colors corresponding to the hight.
 
 Your steps are only ...  
@@ -29,7 +29,8 @@ Then you can see the 3D object like this!
 <img src="https://github.com/ketaro-m/3D-object-creation-from-handwriting-contours/blob/master/img/contour1to3d.png" width="320px">
 
 
-### Additional Functions
+ 
+### <Additional Functions>
 ・Change image types on the left window by clicking ...  
     scroll wheel - original handwriting picture  
     right button - contours image  
