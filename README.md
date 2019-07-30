@@ -4,7 +4,7 @@
 You can create 3D object from a handwriting contours picutre.
 
 ## Demo
-<img src="https://github.com/ketaro-m/3D-object-creation-from-handwriting-contours/img/demo.gif" width="320px">
+<img src="https://github.com/ketaro-m/3D-object-creation-from-handwriting-contours/blob/master/img/demo.gif" width="320px">
 
 ## Usage
 Please compile "3d_create.cpp" like
