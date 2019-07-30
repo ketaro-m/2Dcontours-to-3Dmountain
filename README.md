@@ -29,21 +29,21 @@ Then you can see the 3D object like this!
 <img src="https://github.com/ketaro-m/3D-object-creation-from-handwriting-contours/blob/master/img/contour1to3d.png" width="320px">
 
 
- 
-### <Additional Functions>
-・Change image types on the left window by clicking ...  
-    scroll wheel - original handwriting picture  
-    right button - contours image  
-    left  button - colored contours image  
 
-・Look at 3D object from various angles by dragging it with the left button.
+### Additional Functions
+- Change image types on the left window by clicking ...  
+  - scroll wheel - original handwriting picture  
+  - right button - contours image  
+  - left  button - colored contours image  
 
-・Change the size of 3D Object by dragging it with the right button.
+- Look at 3D object from various angles by dragging it with the left button.
 
-・Change the color range by typing  
-    "r" on keyboard - narrow the range  
-    "b" on keyboard - widen the range
+- Change the size of 3D Object by dragging it with the right button.
 
-・Change the mode of 3D object by typing  
-    "d" on keyboard - "default mode"  
-    "s" on keyboard - "smooth mode" (the slope will be smoother)
+- Change the color range by typing  
+  - "r" on keyboard - narrow the range  
+  - "b" on keyboard - widen the range
+
+- Change the mode of 3D object by typing  
+  - "d" on keyboard - "default mode"  
+  - "s" on keyboard - "smooth mode" (the slope will be smoother)
