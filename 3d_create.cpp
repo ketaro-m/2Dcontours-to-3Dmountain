@@ -11,9 +11,7 @@
 #include <vector>
 
 
-//-----------------------------------------------------------------------------------
 // グローバル変数
-//-----------------------------------------------------------------------------------
 // 視点情報
 static double distance = -1.0, pitch = 20.0, yaw = 0.0;
 static GLfloat spin = 0.0;
@@ -26,13 +24,13 @@ GLint mouse_x = 0, mouse_y = 0;
 double WindowID[2];
 char* _argv;
 int c;
-double x_len=0, y_len=0; //入力画像のサイズ
-int color = 0; //2Dに表示する画像を切り替えるためのグローバル変数
-int nLab;  //等高線の数
-double height[100]; //等高線の高さ番号(nLab分入っている)(スケールは10mなど)
-double max_h=0; //高さの最大値(高さの正規化のために必要)
-int polygon_mode = 0; //ポリゴン生成のモード(0:default, 1:smooth)
-double base = 0; //カラーグラデーションのベースライン
+double x_len=0, y_len=0; 	//入力画像のサイズ
+int color = 0; 			//2Dに表示する画像を切り替えるためのグローバル変数
+int nLab;  			//等高線の数
+double height[100]; 		//等高線の高さ番号(nLab分入っている)(スケールは10mなど)
+double max_h=0; 		//高さの最大値(高さの正規化のために必要)
+int polygon_mode = 0; 		//ポリゴン生成のモード(0:default, 1:smooth)
+double base = 0; 		//カラーグラデーションのベースライン
 double z = 0;
 
 
@@ -61,6 +59,7 @@ void init (void)
   glColorMaterial(GL_FRONT, GL_DIFFUSE);
   glEnable(GL_COLOR_MATERIAL);
   
+  //ライトの表示
   //glEnable (GL_LIGHTING);
   //glEnable (GL_LIGHT0);
   //glEnable (GL_LIGHT1);   
@@ -94,7 +93,7 @@ double colorBar(double x, double *p){
 //
 
 //側面ポリゴンを生成する際の二分探索で精度を高めるために必要
-int shishagonyu(int a, int b){
+int Roundoff(int a, int b){
   double c = ((double)a)/((double)b);
   double c2 = (double)((int)c);
   if(c>=c2+0.5){
@@ -449,7 +448,7 @@ void display1(void)
 	tmp_ln[i]=0;
       }
       ln[0]=0; ln[1]=line_len[k];
-      tmp_ln[0]=shishagonyu(line_len[k],2);
+      tmp_ln[0]=Roundoff(line_len[k],2);
     
       int count = 1;
       for(int i=0; i<200; i++){
@@ -457,7 +456,7 @@ void display1(void)
 	  break;
 	}
 	for(int j=0; j<(int)pow(2.0,(double)(count-1)); j++){
-	  tmp_ln[j]=shishagonyu(ln[j]+ln[j+1],2);
+	  tmp_ln[j]=Roundoff(ln[j]+ln[j+1],2);
 	}
 	for(int k=(int)pow(2.0,(double)(count-1)); k>=0; k--){
 	  int tmp=ln[k];
@@ -474,7 +473,7 @@ void display1(void)
 	steps[ln[i]]+=1;
       }
       for(int i=0; i<(t-y); i++){
-	steps[shishagonyu(ln[i]+ln[i+1],2)]+=1;
+	steps[Roundoff(ln[i]+ln[i+1],2)]+=1;
       }
       
       std::vector<std::vector<cv::Point>>::iterator it12 = contours2.begin();
@@ -549,9 +548,7 @@ void display1(void)
 }
 
 
-//-----------------------------------------------------------------------------------
 // キーボードのコールバック関数
-//-----------------------------------------------------------------------------------
 void keyboard(unsigned char key, int x, int y)
 {
   switch (key) {
@@ -580,9 +577,8 @@ void keyboard(unsigned char key, int x, int y)
     break;
    }
 }
-//-----------------------------------------------------------------------------------
+
 // マウスクリックのコールバック関数
-//-----------------------------------------------------------------------------------
 //2D表示(WINDOW0)の方のマウス操作
 void mouse0(int button, int state, int x, int y) 
 {
@@ -618,9 +614,7 @@ void mouse1(int button, int state, int x, int y)
   glutPostRedisplay();
 }
 
-//-----------------------------------------------------------------------------------
 // マウス移動のコールバック関数
-//-----------------------------------------------------------------------------------
 void motion(int x, int y)
 {
   switch(mouse_button){
@@ -656,9 +650,7 @@ void motion(int x, int y)
   glutPostRedisplay();
 }
 
-//-----------------------------------------------------------------------------------
 // アイドル時のコールバック関数
-//-----------------------------------------------------------------------------------
 void idle()
 {
   for(int i=0; i<2; i++){
