@@ -11,7 +11,7 @@ Your steps are only ...
 - Run this program on your PC.
 
 ## Demo
-<img src="https://github.com/ketaro-m/3D-object-creation-from-handwriting-contours/blob/master/img/demo.gif" width="320px">
+<img src="https://github.com/ketaro-m/3D-object-creation-from-handwriting-contours/blob/master/img/demo.gif" width="400px">
 
 ## Install
 intsall
@@ -19,7 +19,7 @@ intsall
 - OpenGL ver. 4.5.0
 
 ## Usage
-Please compile "3d_create.cpp" like
+Please compile "3d_create.cpp" as following
 ```
 $ g++ -o 3d_create 3d_create.cpp `pkg-config opencv ‒cflags` `pkg-config opencv ‒ libs` -lglut -lGLU -lGL -lm
 ```
