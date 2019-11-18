@@ -2,7 +2,7 @@
 ====
 
 ## Description
-You can learn how the contour map and 3D object are correspond by your **ORIGINAL** handwriting picture.  
+You can learn how the contour map and 3D object correspond to each other using your **ORIGINAL** handwriting picture.  
 This program recognizes the contours, creates a 3D object from it, and adds colors corresponding to the hight.
 
 Your steps are only ...  
@@ -40,18 +40,18 @@ Then you can see the 3D object like this!
   
 ### Additional Functions
 - Change image types on the left window by clicking ...  
-  - scroll wheel - original handwriting picture  
-  - right button - contours image  
-  - left  button - colored contours image  
+  - scroll wheel -> original handwriting picture  
+  - right button -> contours image  
+  - left  button -> colored contours image  
 
 - Look at 3D object from various angles by dragging it with the left button.
 
 - Change the size of 3D Object by dragging it with the right button.
 
 - Change the color range by typing  
-  - "r" on keyboard - narrow the range  
-  - "b" on keyboard - widen the range
+  - "r" on keyboard -> narrow the range  
+  - "b" on keyboard -> widen the range
 
 - Change the mode of 3D object by typing  
-  - "d" on keyboard - "default mode"  
-  - "s" on keyboard - "smooth mode" (the slope will be smoother)
+  - "d" on keyboard -> "default mode"  
+  - "s" on keyboard -> "smooth mode" (the slope will be smoother)
